@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Demo Payment Page</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Sora:wght@600;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <div class="page-wrapper">
+
+    <!-- Left branding panel (hidden on mobile) -->
+    <div class="brand-panel">
+      <div class="brand-content">
+        <div class="brand-logo">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+            <rect width="36" height="36" rx="10" fill="white" fill-opacity="0.15"/>
+            <path d="M10 18C10 13.58 13.58 10 18 10C22.42 10 26 13.58 26 18C26 22.42 22.42 26 18 26" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            <circle cx="18" cy="18" r="3" fill="white"/>
+          </svg>
+          <span>PayDemo</span>
+        </div>
+        <h2>Fast. Secure.<br/>Seamless.</h2>
+        <p>A sandbox environment for testing Interswitch payment gateway integration.</p>
+        <div class="brand-badges">
+          <span>🔒 SSL Encrypted</span>
+          <span>⚡ Instant Processing</span>
+          <span>✅ PCI Compliant</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right payment card -->
+    <div class="card-panel">
+      <div class="payment-card">
+
+        <div class="card-header">
+          <h1>Demo Payment Page</h1>
+          <p class="subtitle">Fill in your details to complete the transaction</p>
+        </div>
+
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <div class="input-wrapper">
+            <span class="input-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                <circle cx="12" cy="7" r="4"/>
+              </svg>
+            </span>
+            <input type="text" id="name" placeholder="John Doe" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <div class="input-wrapper">
+            <span class="input-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+              </svg>
+            </span>
+            <input type="email" id="email" placeholder="john@example.com" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="amount">Amount (₦)</label>
+          <div class="input-wrapper">
+            <span class="input-icon currency">₦</span>
+            <input type="number" id="amount" placeholder="5000" min="1" />
+          </div>
+        </div>
+
+        <button class="pay-btn" onclick="startPayment()">
+          <span class="btn-text">Pay Now</span>
+          <span class="btn-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </span>
+        </button>
+
+        <div class="card-footer">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+          </svg>
+          <span>Secured by Interswitch · Workshop Demo Only</span>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Toast notification -->
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
