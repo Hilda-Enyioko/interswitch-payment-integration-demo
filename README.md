@@ -10,7 +10,7 @@ This repository contains a simple starter project used during the workshop to de
 
 **Event:** Building Production-Ready Systems with Interswitch APIs  
 **Organizer:** Interswitch Developer Community – FUTO (IDC-FUTO)  
-**Date:** 28th February 2026  
+**Date:** 7th March 2026  
 **Time:** 5:00 PM – 7:00 PM  
 **Location:** Google Meet  
 
